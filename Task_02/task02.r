@@ -81,5 +81,17 @@ par(Las=1,mar=c,(5,5,1,1),mgp=c(2,0.5,0),tck=0.01)
 plot(as.numeric(names(totalNap)), totalNap, type="b", pch=16, xlab="age in days", ylab="Nap time in minutes"
 cor.test(beren4$start_hour, beren4$sleepTime)     
 This correlation test between the time nap starts its total duration shows a negative relationship
-between the two. 
+between the two.
+beren3
+The rate at which Beren will produce wet diapers will decrease over time. 
+dayID <- apply(Data, 1, function(x) paste(x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-&m-%d", origin = "2019-08-23")
+attach(beren3)
+plot(dry, wet)
+title("Dry Diapers vs Wet Diapers")
+pdf("mygraph.pdf")
+Trouble with graphing portion; will seek help Wednesday for future -- 
+could not locate my variables. 
+
+
 
