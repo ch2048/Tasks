@@ -1,3 +1,5 @@
+setwd('~/Desktop/Evolution/Tasks/Task_03')
+getwd()
 5
 A <-5
 A * 2

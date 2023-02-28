@@ -1,7 +1,14 @@
+#set workspace
 setwd('~/Desktop/Evolution/Tasks/Task_04')
 getwd()
+
+#data
 source("http://jonsmitchell.com/code/fxn05.R")
+
+#define object
 Pop1 <- simPop(Popsize=50, nGenerations=100, initial_p=0.5, h=1, s=0)
+
+#plot 1
 plot(1:nrow(Pop1), Pop1[,1], ylim=c(0,1), type="l", xlab="generation", ylab="allele freq.", lwd=2)
 lines(1:nrow(Pop1), Pop1[,2], lwd=2, col='red')
 legend("topleft", legend=c("a","b"), col=c("black", "red"), lwd=2, bty="n")
@@ -9,7 +16,15 @@ plotFit(nruns=10, n=50, ngens=100, init_p=0.5, h=1, s=0)
 Expectation <-c(10,10,10,10)
 Observed <-c(15,15,5,5)
 Chisq <-sum(((Expectation-Observed) ^2)/Expectation)
+dev.off()
+
+#barplot
 barplot(rbind(Expectation, Observed), beside=T, main=bquote(chi^2 ~ "=" ~.(Chisq)), legend.text=c("expected","observed"))
+
+#save as pdf
+pdf("testplot.pdf", height = 4, width = 4)
+
+#save results as csv
 results <- read.csv("http://jonsmitchell.com/data/biol112labresults.csv", stringsAsFactors=F)        
 counts <-results[,c("yellow", "red", "green", "blue", "black", "tan")]
 backgrounds <- c("White", "Red", "Yellow", "Green", "Blue", "Black")
