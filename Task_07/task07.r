@@ -7,6 +7,7 @@ text.string<-
 vert.tree<-read.tree(text=text.string)
 plot(vert.tree, edge.width=2)
 nodelabels(frame="circle", bg='white',cex=1)
+#Q1: Sharks & goldfish more closely related
 vert.tree
 str(vert.tree)
 tree<-read.tree(text="(((A,B),(C,D)),E);")
@@ -39,15 +40,18 @@ which.min(AnolisTree$edge.length)
 NewAnolisTree<- drop.tip(AnolisTree, 82)
 plot(NewAnolisTree, cex=0.25)
 #
+pdf("007_plot01.pdf")
 ltt(AnolisTree)
 abline(0, 1, lwd=2, col='red', lty=2)
 fit.bd(AnolisTree,b=NULL,d=NULL,rho=0.2)
+dev.off()
 setwd('~/Desktop/Evolution/Tasks/Task_07')
 getwd()
 plot(tree, type="fan")
 data <- read.csv("https://jonsmitchell.com/data/svl.csv", stringsAsFactors=F, row.names=1)
 svl <- setNames(data$svl, rownames(data))
 Ancestors <- fastAnc(tree, svl, vars=TRUE, CI=TRUE)
+#Q3&4: Variance CI95
 par(mar=c(0.1,0.1,0.1,0.1))
 plot(tree, type="fan", lwd=2, show.tip.label=F)
 tipslabels(pch=16, cex=0.25*svl[tree$tip.label])
