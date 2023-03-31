@@ -1,7 +1,2 @@
 setwd('~/Desktop/Evolution/Tasks/Task_07')
 getwd()
-library(phytools)
-library(ape)
-text.string<-#
- "(((((((cow, pig),whale),(bat,(lemur,human))),(robin,iguana)),coelacanth), (gold_fish , trout)),shark);"
-vert.tree<-read.tree(text=text.string)
