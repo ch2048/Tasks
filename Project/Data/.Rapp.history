@@ -1,17 +1,58 @@
 setwd('~/Desktop/Evolution/Tasks/Project/Data')
 Data1 <- read.csv("NPHData1.csv")
 head (Data1)
-pdf("PouchvsLeafNo")
-boxplot(Pouch~LeafNo, data=Data1)
 library(phytools)
-boxplot(Pouch~LeafNo, data=Data1)
 library(ggplot2)
-boxplot(Pouch~LeafNo, data=Data1)
+cor.test(Data1$ShootBMg, Data1$Rhizospecies)
+cor.test(Data1$RhizoSpecies, Data1$ShootBMg)
+cor.test(Data1$ShootBMg, Data1$RootBMg)
+Graph1 = ggplot(Data1, aes(x=ShootBMg, y=RootBMg))
+Graph1
+Graph1 = ggplot(Data1, aes(x=ShootBMg, y=RootBMg))#
+Graph1{#
+	geom_point(size = 3, shape = 21, color = "blue")#
+	labs(x = "Shoot Biomass (Dried)", y = "Root Biomass (Dried)")#
+	theme_classic()#
+}
+Graph1{#
+	geom_point(size = 3, shape = 21, color = "blue")#
+	labs(x = "Shoot Biomass (Dried)", y = "Root Biomass (Dried)")#
+	theme_classic()#
+	}
+Graph1{#
+	geom_point(size = 3, shape = 21, color = "blue")#
+	labs(x = "Shoot Biomass (Dried)", y = "Root Biomass (Dried)")#
+	theme_classic()
+pdf("Shoot Biomass (Dried) vs Root Biomass (Dried).pdf")
+cor.test(Data1$ShootBMg, Data1$RootBMg)
+Graph1 = ggplot(Data1, aes(x=ShootBMg, y=RootBMg))
+Graph1{#
+	geom_point(size = 3, shape = 21, color = "blue")#
+	labs(x = "Shoot Biomass (Dried)", y = "Root Biomass (Dried)")#
+	theme_classic()
 dev.off()
+pdf("Shoot Biomass vs Root Biomass.pdf")
+Graph1 = ggplot(Data1, aes(x=ShootBMg, y=RootBMg))
+Graph1{#
+	geom_point(size = 3, shape = 21, color = "blue")#
+	labs(x = "Shoot Biomass (Dried)", y = "Root Biomass (Dried)")#
+	theme_classic()#
 dev.off()
+Graph1 = gglot(Data1, aes(x=ShootBMg, y=RootBMg))
+setwd('~/Desktop/Evolution/Tasks/Project/Data')
 Data1 <- read.csv("NPHData1.csv")
 head (Data1)
-pdf("PouchvsLeafNo.pdf")
-boxplot(Pouch~LeafNo, data=Data1)
+library(phytools)
+library(ggplot2)
+pdf("Shoot Biomass vs Root Biomass.pdf")
+cor.test(Data1$ShootBMg, Data1$RootBMg)
+Graph1 = ggplot(Data1, aes(x=ShootBMg, y=RootBMg))
+Graph1{#
+	geom_point(size = 3, shape = 21, color = "blue")#
+	labs(x = "Shoot Biomass (Dried)", y = "Root Biomass (Dried)")#
+	theme_classic()#
+	}
 dev.off()
-cor.test(Data1$Pouch, Data1$LeafNo)
+Graph1
+Graph1 = ggplot(Data1, aes(x=ShootBMg, y=RootBMg))
+Graph1

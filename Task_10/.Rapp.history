@@ -1,0 +1,60 @@
+setwd('~/Desktop/Evolution/Tasks/Task_10')
+getwd()
+x <- rnorm(n = 100, mean = 0, sd = 2)
+x
+y
+model <- lm(y-x)
+summary(model)
+plot(model)
+slope <- vector("numeric", 100)
+intercept <- vector("numeric", 100)
+z <- vectpor("numeric", 100)
+for (i in 1:100){#
+	x <- rnorm(100, mean=0, sd=2)#
+	y <- x * 5 + 2 + runif(100, min=0, max=0.1)#
+	z[i] <- runif(1, min=0.5, max=2)#
+	model <- lm(y~x)#
+	intercept[i] <- coef(model)[1]*z[i]+2#
+	slope[i] <- coef(model)[2]*z[i]#
+}
+getwd()#
+x <- rnorm(n = 100, mean = 0, sd = 2)#
+x#
+y <- x*5+2+runif(100, min = 0, max = 0.1)#
+y#
+model <- lm(y-x)#
+summary(model)#
+plot(model)#
+slope <- vector("numeric", 100)#
+intercept <- vector("numeric", 100)#
+z <- vectpor("numeric", 100)
+setwd('~/Desktop/Evolution/Tasks/Task_10')
+getwd()
+x <- rnorm(n = 100, mean = 0, sd = 2)#
+x#
+y <- x*5+2+runif(100, min = 0, max = 0.1)#
+y
+model <- lm(y~x)
+summary(model)#
+plot(model)
+setwd('~/Desktop/Evolution/Tasks/Task_10')
+getwd()
+x <- rnorm(n = 100, mean = 0, sd = 2)#
+x#
+y <- x*5+2+runif(100, min = 0, max = 0.1)#
+y
+model <- lm(y~x)#
+summary(model)
+pdf("plot10.pdf")
+plot(model)
+slope <- vector("numeric", 100)#
+intercept <- vector("numeric", 100)#
+z <- vectpor("numeric", 100)#
+for (i in 1:100){#
+	x <- rnorm(100, mean=0, sd=2)#
+	y <- x * 5 + 2 + runif(100, min=0, max=0.1)#
+	z[i] <- runif(1, min=0.5, max=2)#
+	model <- lm(y~x)#
+	intercept[i] <- coef(model)[1]*z[i]+2#
+	slope[i] <- coef(model)[2]*z[i]#
+}
