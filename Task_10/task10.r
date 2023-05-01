@@ -33,3 +33,7 @@ win_frequency <- c(same_door, diff_door)
 pdf("plot10.ec01.pdf")
 barplot(win_frequency, names.arg = c("Same Door", "Different Door"), ylab ="Frequency of Wins (10,000 Runs)", ylim = c(0, 0.8), main = "Chance of Winning the Grand Prize", col = "turquoise")
 #EC2:
+install.packages('meme')
+library(meme)
+plot("plot10.ec02.pdf")
+meme(image, "Me During The Entire Semester of Evolution", size=4) 

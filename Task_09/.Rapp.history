@@ -90,3 +90,8 @@ getwd()
 library(diversitree)
 library()
 library('diversitree')
+setwd('~/Desktop/Evolution/Tasks/Task_09')
+getwd
+setwd('~/Desktop/Evolution/Tasks/Task_09')
+getwd()
+install(diversitree)
